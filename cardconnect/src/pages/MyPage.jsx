@@ -5,7 +5,7 @@ import RightBackgroundImg from '../components/RightBackgroundImg'
 
 function MyPage() {
   return (
-    <div >
+    <div style={{display: 'flex',height: '100vh'}} >
       <LeftBackgroundImg  />
       <RightBackgroundImg />
     </div>
