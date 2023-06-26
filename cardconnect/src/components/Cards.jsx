@@ -16,7 +16,7 @@ function Cards() {
           </div>
         </div>
         <img src={backCard} alt="" style={{left:'-15rem', position: 'relative', top: '-7rem', height: '15rem', boxShadow: '5px 25px 20px rgba(0, 0, 0, 0.2)', borderRadius: '1rem'}}/>
-        {/* <h1 style={{position: 'absolute', top: '50%', left: '50%',  zIndex: '1'}}>Your Heading</h1> */}
+        <span style={{position: 'absolute', top: '28.5rem', left: '36rem',  zIndex: '1', color: 'hsl(270, 3%, 87%)', letterSpacing:'2px',}}>000</span>
     </div>
   )
 }
