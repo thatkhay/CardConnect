@@ -44,14 +44,14 @@ function RightBackgroundImg({handleFormSubmit}) {
     >
        <form onSubmit={handleSubmit}>
       <div style={{display: 'flex', flexDirection: 'column',}}>
-      <TextField id="outlined-basic" label="CARDHOLDER NAME" variant="outlined" style={{marginBottom: '1rem'}} type='tel' required name='input2' value={inputedVal.input2} onChange={handleChange}/>
-<TextField id="outlined-basic" label="CARD NUMBER" variant="outlined" style={{marginBottom: '1rem'}} type="text" required name='input1' value={inputedVal.input1} onChange={handleChange}/>
+      <TextField id="outlined-basic" label="CARDHOLDER NAME" variant="outlined" style={{marginBottom: '1rem'}} type='text' required name='input2' value={inputedVal.input2} onChange={handleChange}/>
+<TextField id="outlined-basic" label="CARD NUMBER" variant="outlined" style={{marginBottom: '1rem'}} type="number" required name='input1' value={inputedVal.input1} onChange={handleChange}/>
       </div>
 
       <div style={{display: 'flex'}}>
-      <TextField id="outlined-basic" label="MM" variant="outlined" style={{marginBottom: '1rem', width: '4rem', marginRight: '1rem',marginTop: '1rem'}} value={inputedVal.input3} type='number' name='input3'onChange={handleChange}/>
-      <TextField id="outlined-basic" label="YY" variant="outlined" style={{marginBottom: '1rem', width: '4rem', marginRight: '1rem',marginTop: '1rem'}} value={inputedVal.input4} type="number" name='input4'onChange={handleChange}/>
-      <TextField id="outlined-basic" label="CVC" variant="outlined" style={{marginBottom: '1rem', width: '7rem',marginTop: '1rem'}} type="number"  value={inputedVal.input5}  name='input5' onChange={handleChange}/>
+      <TextField id="outlined-basic" label="MM" variant="outlined" style={{marginBottom: '1rem', width: '4rem', marginRight: '1rem',marginTop: '1rem'}} value={inputedVal.input3} type='number' name='input3'onChange={handleChange}inputProps={{min:1,max:99}}/>
+      <TextField id="outlined-basic" label="YY" variant="outlined" style={{marginBottom: '1rem', width: '4rem', marginRight: '1rem',marginTop: '1rem'}} value={inputedVal.input4} type="number" name='input4'onChange={handleChange}inputProps={{min:0,max:99}}/>
+      <TextField id="outlined-basic" label="CVC" variant="outlined" style={{marginBottom: '1rem', width: '7rem',marginTop: '1rem'}} type="number"  value={inputedVal.input5}  name='input5' onChange={handleChange} inputProps={{min:10,max:999}}/>
       </div>
       <Button variant="contained" style={{width: '20rem',marginTop: '1rem', backgroundColor: 'hsl(278, 68%, 11%)'}} type='submit'>confirm</Button>
       </form>
